@@ -1,0 +1,152 @@
+/*? global clearing */
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: var(--hind);
+}
+
+:root {
+  /* font family */
+  --hind: "Hind", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  /* color */
+  --dark: #1d1d1d;
+  --basic: #fff;
+  --primary: #f0206b;
+  --general: #717171;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: var(--poppins);
+}
+
+p {
+  font-style: var(--hind);
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.active {
+  color: var(--primary);
+}
+
+/* === NAVBAR === */
+
+nav {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+nav a {
+  color: var(--basic);
+}
+
+.navigation {
+  width: 60%;
+  gap: 1em;
+}
+
+.navigation a {
+  display: inline-block;
+  padding: 1.5em 0.7em;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.navigation a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--basic);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.navigation a:hover::after {
+  width: 100%;
+}
+
+.hamBtn {
+  display: none;
+}
+
+.hamBtn span {
+  color: var(--basic);
+}
+
+/* === END NAVBAR === */
+
+/* === HERO SECTION === */
+
+#hero {
+  height: 100vh;
+  background-color: var(--dark);
+  color: var(--basic);
+  position: relative;
+  overflow: hidden;
+}
+
+#hero video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#hero figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+}
+
+#hero figcaption h1 {
+  font-family: var(--poppins);
+}
+
+/* === END HERO SECTION === */
+
+/* === ABOUT === */
+
+#about {
+  padding: 3em 0;
+}
+
+/* === END ABOUT ==== */
