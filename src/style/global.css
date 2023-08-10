@@ -65,6 +65,7 @@ nav {
   position: fixed;
   z-index: 1;
   width: 100%;
+  transition: 0.3s ease-in-out;
 }
 
 nav a {
@@ -83,22 +84,11 @@ nav a {
   transition: 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
-}
-
-.navigation a::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: var(--basic);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   transition: 0.3s ease-in-out;
 }
 
-.navigation a:hover::after {
-  width: 100%;
+.navigation a:hover {
+  color: var(--primary);
 }
 
 .hamBtn {
@@ -137,8 +127,72 @@ nav a {
   justify-content: center;
 }
 
-#hero figcaption h1 {
-  font-family: var(--poppins);
+#hero figcaption svg path:first-child {
+  stroke-dasharray: 444;
+  stroke-dashoffset: 444;
+  animation: textAnimate 2s ease-in-out 5s forwards;
+}
+
+#hero figcaption svg path:nth-child(2) {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  animation: textAnimate 2s ease-in-out 5.1s forwards;
+}
+
+#hero figcaption svg path:nth-child(3) {
+  stroke-dasharray: 322;
+  stroke-dashoffset: 322;
+  animation: textAnimate 2s ease-in-out 5.2s forwards;
+}
+
+#hero figcaption svg path:nth-child(4) {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  animation: textAnimate 2s ease-in-out 5.3s forwards;
+}
+
+#hero figcaption svg path:nth-child(5) {
+  stroke-dasharray: 478;
+  stroke-dashoffset: 478;
+  animation: textAnimate 2s ease-in-out 5.4s forwards;
+}
+
+#hero figcaption svg path:nth-child(6) {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  animation: textAnimate 2s ease-in-out 5.5s forwards;
+}
+
+#hero figcaption svg path:nth-child(7) {
+  stroke-dasharray: 277;
+  stroke-dashoffset: 277;
+  animation: textAnimate 2s ease-in-out 5.6s forwards;
+}
+
+#hero figcaption svg path:nth-child(8) {
+  stroke-dasharray: 277;
+  stroke-dashoffset: 277;
+  animation: textAnimate 2s ease-in-out 5.7s forwards;
+}
+
+#hero figcaption svg path:last-child {
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  animation: textAnimate 2s ease-in-out 5.8s forwards;
+}
+
+@keyframes textAnimate {
+  0% {
+    fill: transparent;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: var(--basic);
+  }
 }
 
 /* === END HERO SECTION === */
@@ -146,7 +200,73 @@ nav a {
 /* === ABOUT === */
 
 #about {
-  padding: 3em 0;
+  padding: 5em 0;
+}
+
+#about img {
+  position: relative;
+  border-radius: 0 30px 0 30px;
 }
 
 /* === END ABOUT ==== */
+
+/* RESPONSIVE */
+/* TABLET VIEW */
+@media screen and (max-width: 885px) {
+  /* NAVBAR RESPONSIVE */
+
+  nav {
+    padding: 1em 0;
+  }
+
+  .hamBtn {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hamBtn span.show {
+    color: var(--dark);
+  }
+
+  .navigation {
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--basic);
+    padding: 0 1em;
+    transition: 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+
+  .navigation.show {
+    transform: translateX(0);
+  }
+
+  .navigation a {
+    width: 100%;
+    color: var(--dark);
+    border-radius: 10px;
+  }
+
+  .navigation a:hover {
+    background-color: rgb(171, 171, 171);
+    color: var(--basic);
+    text-shadow: none;
+  }
+}
+
+/* SMARTPHONE VIEW */
+@media screen and (max-width: 412px) {
+  /* HERO RESPONSIVE */
+
+  #hero svg {
+    max-width: 300px;
+  }
+}
