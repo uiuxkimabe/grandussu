@@ -203,8 +203,11 @@ nav a {
   padding: 5em 0;
 }
 
+#about .row {
+  flex-wrap: wrap;
+}
+
 #about img {
-  position: relative;
   border-radius: 0 30px 0 30px;
 }
 
@@ -260,6 +263,17 @@ nav a {
     color: var(--basic);
     text-shadow: none;
   }
+
+  /* HERO RESPONSIVE */
+
+  #hero svg {
+    max-width: 300px;
+  }
+
+  /* ABOUT */
+  #about img {
+    max-width: 300px;
+  }
 }
 
 /* SMARTPHONE VIEW */
@@ -267,6 +281,6 @@ nav a {
   /* HERO RESPONSIVE */
 
   #hero svg {
-    max-width: 300px;
+    max-width: 250px;
   }
 }
