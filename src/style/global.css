@@ -288,7 +288,6 @@ nav a {
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1em;
-  /* border: 1px solid black; */
 }
 
 .room-slide a {
