@@ -234,6 +234,10 @@ nav a {
   overflow: hidden;
 }
 
+#about a {
+  color: var(--dark);
+}
+
 #about p {
   color: var(--general);
 }
@@ -296,6 +300,11 @@ nav a {
 
 .room-slide .h-rooms {
   overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.room-slide .h-rooms:hover {
+  transform: rotate(10deg) scale(0.9);
 }
 
 .room-slide .h-rooms img {
@@ -309,6 +318,49 @@ nav a {
 }
 
 /* === END ABOUT ==== */
+
+/* === PROMO === */
+
+#promo {
+  background: var(--dark);
+  text-align: center;
+  color: var(--basic);
+}
+
+#promo .row {
+  margin: 2em 0;
+  grid-template-areas:
+    "deals1 deals2"
+    "deals3 deals4";
+  gap: 10px;
+}
+
+#promo .deals {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../assets/resto/amarillys-resto-05.jpg) center center;
+}
+
+.package {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 1em;
+  justify-content: flex-start;
+}
+
+.package::-webkit-scrollbar {
+  display: none;
+}
+
+.card-package {
+  flex: 0 0 250px;
+  height: 300px;
+  background: var(--basic);
+}
+
+/* === END PROMO === */
 
 /* RESPONSIVE */
 /* TABLET VIEW */
@@ -382,5 +434,14 @@ nav a {
 
   .hero-headline {
     max-width: 312px;
+  }
+
+  /* ABOUT RESPONSIVE */
+  .desc {
+    order: 2;
+  }
+
+  .photo-review {
+    order: 1;
   }
 }
