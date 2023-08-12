@@ -8,6 +8,7 @@ body {
   list-style: none;
   text-decoration: none;
   font-family: var(--hind);
+  transition: 0.3s ease-in-out;
 }
 
 :root {
@@ -322,6 +323,7 @@ nav a {
 /* === PROMO === */
 
 #promo {
+  padding-bottom: 3em;
   background: var(--dark);
   text-align: center;
   color: var(--basic);
@@ -340,7 +342,7 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../assets/resto/amarillys-resto-05.jpg) center center;
+  background-color: var(--primary);
 }
 
 .package {
@@ -361,6 +363,72 @@ nav a {
 }
 
 /* === END PROMO === */
+
+/* === TEAM === */
+
+#team {
+  padding-bottom: 1em;
+}
+
+#team .row {
+  gap: 1em;
+  margin-top: 1em;
+}
+
+#team .col {
+  flex: 1 1;
+}
+
+#team ul {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--general);
+}
+
+#team ul li {
+  margin: 10px 0;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--general);
+}
+
+.nav-profile {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+}
+
+.team-profile {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  justify-content: flex-start;
+  gap: 1em;
+  transition: 0.3s ease-in-out;
+}
+
+.team-profile::-webkit-scrollbar {
+  display: none;
+}
+
+.profile {
+  flex: 0 0 100%;
+  height: 300px;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid var(--dark);
+  transition: 0.3s ease-in-out;
+}
+
+.profile .photo-profile {
+  margin-bottom: 10px;
+  font-size: 4rem;
+  margin: auto;
+}
+
+.link {
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+/* === END TEAM === */
 
 /* RESPONSIVE */
 /* TABLET VIEW */
@@ -405,6 +473,7 @@ nav a {
     width: 100%;
     color: var(--dark);
     border-radius: 10px;
+    text-shadow: none;
   }
 
   .navigation a:hover {
@@ -443,5 +512,21 @@ nav a {
 
   .photo-review {
     order: 1;
+  }
+
+  /* PROMO */
+  #promo .hot-deals {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  .hot-deals::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hot-deals .deals {
+    flex: 0 0 300px;
   }
 }

@@ -15,3 +15,12 @@ hamBtn.addEventListener("click", () => {
   hamBtn.classList.toggle("show");
   navigation.classList.toggle("show");
 });
+
+// slider profile
+const slideProfile = document.querySelectorAll(".nav-profile ul li a");
+const profile = document.querySelectorAll(".profile");
+slideProfile.forEach((element) => {
+  element.addEventListener("click", () => {
+    element.preventDefault;
+  });
+});
