@@ -430,6 +430,17 @@ nav a {
 
 /* === END TEAM === */
 
+/* === FOOTER ==== */
+
+footer {
+  background-color: var(--dark);
+  text-align: center;
+  padding: 1em 0;
+  color: var(--basic);
+}
+
+/* === END FOOTER === */
+
 /* RESPONSIVE */
 /* TABLET VIEW */
 @media screen and (max-width: 885px) {
