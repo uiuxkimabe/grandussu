@@ -64,7 +64,7 @@ p {
 
 nav {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   transition: 0.3s ease-in-out;
 }
@@ -364,68 +364,86 @@ nav a {
 
 /* === END PROMO === */
 
-/* === TEAM === */
+/* === FACILITIES === */
 
-#team {
-  padding-bottom: 1em;
+#facilities {
+  padding: 3em 0;
 }
 
-#team .row {
+#facilities a {
+  color: var(--dark);
+}
+
+#facilities .row {
+  grid-template-areas:
+    "convention restaurant"
+    "convention playground";
   gap: 1em;
   margin-top: 1em;
 }
 
-#team .col {
-  flex: 1 1;
-}
-
-#team ul {
-  padding: 10px;
+#facilities .row .col {
   border-radius: 10px;
-  border: 1px solid var(--general);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
 }
 
-#team ul li {
-  margin: 10px 0;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--general);
+#facilities .row .col img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.convention {
+  grid-area: convention;
+  height: 300px;
+}
+
+.restaurant {
+  grid-area: restaurant;
+}
+
+.playground {
+  grid-area: playground;
+}
+
+.desc-facilities {
+  width: 100%;
+  padding: 0.8em;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#facilities .row .col p {
+  font-size: 0.9rem;
+  color: var(--general);
+}
+
+/* === END FACILITIES === */
+
+/* === TEAM === */
+
+#team {
+  padding-bottom: 2em;
 }
 
 .nav-profile {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1em;
+  margin-top: 2em;
 }
 
-.team-profile {
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  justify-content: flex-start;
-  gap: 1em;
-  transition: 0.3s ease-in-out;
-}
-
-.team-profile::-webkit-scrollbar {
-  display: none;
-}
-
-.profile {
-  flex: 0 0 100%;
-  height: 300px;
-  justify-content: center;
+.card-profile {
   text-align: center;
-  border: 1px solid var(--dark);
-  transition: 0.3s ease-in-out;
 }
 
-.profile .photo-profile {
-  margin-bottom: 10px;
-  font-size: 4rem;
-  margin: auto;
-}
-
-.link {
-  justify-content: space-evenly;
-  margin-top: 10px;
+.contact-link {
+  margin-top: 1em;
 }
 
 /* === END TEAM === */
@@ -434,9 +452,17 @@ nav a {
 
 footer {
   background-color: var(--dark);
-  text-align: center;
   padding: 1em 0;
   color: var(--basic);
+}
+
+footer a {
+  color: var(--basic);
+}
+
+footer .row {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
 }
 
 /* === END FOOTER === */
@@ -502,6 +528,18 @@ footer {
   #about .col {
     flex: 0 0 100%;
   }
+
+  /* FACILITIES */
+
+  #facilities .row {
+    grid-template-areas:
+      "convention convention"
+      "restaurant playground";
+  }
+
+  #facilities .row .col {
+    height: 300px;
+  }
 }
 
 /* SMARTPHONE VIEW */
@@ -539,5 +577,13 @@ footer {
 
   .hot-deals .deals {
     flex: 0 0 300px;
+  }
+
+  /* FACILITIES */
+  #facilities .row {
+    grid-template-areas:
+      "convention"
+      "restaurant"
+      "playground";
   }
 }
