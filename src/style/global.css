@@ -663,10 +663,10 @@ footer ul li {
 
   footer {
     position: relative;
+    padding-bottom: 2em;
   }
 
   .booking {
-    position: relative;
     width: 100%;
   }
 }
