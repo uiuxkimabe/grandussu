@@ -23,27 +23,22 @@ hamBtn.addEventListener("click", () => {
   navigation.classList.toggle("show");
 });
 
-// Navigasi modals
-const tabs = document.querySelectorAll(".tab li a");
-tabs.forEach((e) => {
-  e.preventDefault;
-});
-
-const modal = document.querySelector(".modals");
+// Navigasi Modals Rooms
 const cardRooms = document.querySelectorAll(".card-room");
-const detailCardRooms = document.querySelectorAll(".detail-card-rooms");
-
-function modalCard(params) {
-  return (detailCardRooms[params].style.display = "block");
-}
-
+const modal = document.querySelector(".modals");
+const cancelCheck = document.querySelector(".btn .cancel");
 cardRooms.forEach((element) => {
   element.addEventListener("click", () => {
     modal.classList.add("popup");
-    modalCard(0);
   });
 });
 
 modal.addEventListener("click", () => {
   modal.classList.remove("popup");
+  console.info("oke");
+});
+
+cancelCheck.addEventListener("click", () => {
+  modal.classList.remove("popup");
+  console.info("oke");
 });

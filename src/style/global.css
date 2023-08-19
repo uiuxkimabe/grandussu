@@ -343,97 +343,67 @@ nav a {
   justify-content: center;
 }
 
-.detail-card-rooms {
-  max-width: 312px;
+.room-card {
   background-color: var(--basic);
-  padding: 10px;
-  font-size: 0.8rem;
-  position: absolute;
-  display: none;
-}
-
-.detail-card-header {
-  overflow: hidden;
-  position: relative;
-}
-
-.detail-card-header img {
-  object-fit: cover;
-  max-width: 300px;
-}
-
-.detail-card-header figcaption {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  padding: 10px;
-  color: var(--basic);
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-}
-
-.detail-card-desc {
-  position: relative;
-}
-
-.detail-card-desc .tab {
-  margin-bottom: 1em;
-}
-
-.detail-card-desc .tab a {
-  color: var(--dark);
-}
-
-.detail-card-desc .tab li {
-  padding: 0.5em;
-  border-bottom: 1px solid var(--general);
-}
-
-.detail-card-desc figcaption {
-  overflow: scroll;
-  align-items: flex-start;
-  transition: 0.3s ease-in-out;
-  scroll-behavior: smooth;
-}
-
-.detail-card-desc figcaption::-webkit-scrollbar {
-  display: none;
-}
-
-.detail-card-desc figcaption .col {
-  flex: 0 0 100%;
-  padding: 10px;
-}
-
-.detail-card-desc form .row {
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 0.5em;
-  margin-top: 0.5em !important;
-}
-
-.detail-card-desc .room-facilities ul {
-  justify-content: flex-start;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.detail-card-desc .room-facilities ul li {
-  flex: 0 0 100px;
-}
-
-.detail-card-desc form .row input {
-  width: 120px;
-  padding: 5px;
-}
-
-.detail-card-desc .checkout {
-  margin-top: 1.5em;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+  place-items: start;
   padding: 1em;
+}
+
+.room-img {
+  overflow: hidden;
+}
+
+.room-img img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.room-desc {
+  margin: 1em 0;
+  height: 130px;
+  overflow-y: scroll;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+.room-desc::-webkit-scrollbar {
+  display: none;
+}
+
+.room-desc h3 {
+  margin: 0.5em 0;
+}
+
+.room-desc ul {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.room-desc ul li {
+  flex: 0 0 80px;
+  color: var(--general);
+}
+
+.btn .check {
+  margin-top: 1em;
+  width: 100%;
+  padding: 0.6em 2em;
+  border: none;
   background-color: var(--primary);
   color: var(--basic);
+  border-radius: 5px;
+}
+
+.btn .cancel {
+  margin-top: 1em;
+  width: 100%;
+  padding: 0.6em 2em;
   border: none;
+  border: 1px solid var(--dark);
+  color: var(--dark);
   border-radius: 5px;
 }
 
