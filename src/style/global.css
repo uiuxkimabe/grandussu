@@ -402,6 +402,10 @@ nav a {
   padding: 3em 0;
 }
 
+#our-facilities .container {
+  position: relative;
+}
+
 #our-facilities .row {
   overflow-x: scroll;
   justify-content: flex-start;
@@ -409,10 +413,30 @@ nav a {
   margin: 2em 0;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  position: relative;
 }
 
 #our-facilities .row::-webkit-scrollbar {
   display: none;
+}
+
+#our-facilities #prev {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  font-size: 2em;
+  background-color: none;
+  background-color: transparent;
+  border: none;
+}
+
+#our-facilities #next {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
 }
 
 .card-facilities {
