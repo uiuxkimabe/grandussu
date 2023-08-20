@@ -229,7 +229,7 @@ nav a {
 /* === ABOUT === */
 
 #about {
-  padding: 5em 0;
+  padding: 3em 0;
   position: relative;
   overflow: hidden;
 }
@@ -289,7 +289,7 @@ nav a {
 /* === PREVIEW ROOMS === */
 
 #our-rooms {
-  padding: 3em 0;
+  padding: 2em 0;
 }
 
 #our-rooms .row {
@@ -395,6 +395,42 @@ nav a {
 }
 
 /* === END PREVIEW ROOMS === */
+
+/* === PREVIEW FACILITIES === */
+
+#our-facilities {
+  padding: 3em 0;
+}
+
+#our-facilities .row {
+  overflow-x: scroll;
+  justify-content: flex-start;
+  gap: 1.5em;
+  margin: 2em 0;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+#our-facilities .row::-webkit-scrollbar {
+  display: none;
+}
+
+.card-facilities {
+  flex: 0 0 300px;
+}
+
+.card-facilities img {
+  max-width: 300px;
+}
+
+.card-facilities figcaption p {
+  text-align: justify;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: var(--general);
+}
+
+/* === END PREVIEW FACILITIES === */
 
 /* === FOOTER ==== */
 
