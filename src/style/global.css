@@ -420,27 +420,12 @@ nav a {
   display: none;
 }
 
-#our-facilities #prev {
-  position: absolute;
-  top: 60%;
-  left: 0;
-  font-size: 2em;
-  background-color: none;
-  background-color: transparent;
-  border: none;
-}
-
-#our-facilities #next {
-  position: absolute;
-  top: 60%;
-  right: 0;
-  font-size: 2em;
-  background-color: transparent;
-  border: none;
-}
-
 .card-facilities {
   flex: 0 0 300px;
+}
+
+.card-facilities a {
+  color: var(--primary);
 }
 
 .card-facilities img {
@@ -456,11 +441,77 @@ nav a {
 
 /* === END PREVIEW FACILITIES === */
 
+/* === PROMOTION === */
+
+#promotion {
+  /* height: 100vh; */
+  padding: 3em 0;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.9051995798319328) 100%,
+      rgba(0, 0, 0, 0.8295693277310925) 100%
+    ),
+    url(../assets/resto/amarillys-resto-01.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--basic);
+}
+
+#promotion .row {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5em;
+  place-items: center;
+}
+
+#promotion h1 {
+  font-size: 5vmax;
+}
+
+.package {
+  gap: 1em;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.package::-webkit-scrollbar {
+  display: none;
+}
+
+.package .card-package {
+  flex: 0 0 250px;
+  height: 300px;
+  border: 1px solid var(--general);
+  border-radius: 10px;
+  align-items: flex-end;
+  background: url(https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80)
+    no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.card-package figcaption {
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.969625350140056) 19%,
+    rgba(0, 0, 0, 0.6727065826330532) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 10px;
+}
+
+.card-package .period {
+  font-size: 0.8rem;
+}
+
+/* === END PROMOTION === */
+
 /* === FOOTER ==== */
 
 footer {
   background-color: var(--dark);
-  /* padding: 1em 0; */
+  padding: 1.3em 0;
   color: var(--basic);
 }
 
@@ -468,10 +519,14 @@ footer a {
   color: var(--basic);
 }
 
+footer a:hover {
+  color: var(--primary);
+}
+
 footer .row {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2em;
-  margin: 2em 0;
+  /* margin: 2em 0; */
 }
 
 footer h3 {
@@ -484,6 +539,9 @@ footer h4 {
 
 footer ul li {
   margin: 10px 0;
+  list-style: inside;
+  justify-content: flex-start !important;
+  gap: 10px;
 }
 
 .socmed {
@@ -494,6 +552,8 @@ footer ul li {
 .author {
   text-align: center;
   padding: 1em 0;
+  margin-top: 1em;
+  border-top: 1px solid var(--general);
 }
 
 .booking {
@@ -610,5 +670,10 @@ footer ul li {
 
   .photo-review {
     order: 1;
+  }
+
+  /* PROMOTION */
+  #promotion h1 {
+    text-align: center;
   }
 }

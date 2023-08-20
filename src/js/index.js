@@ -82,20 +82,3 @@ cardRoom[2].addEventListener("click", () => {
 btnExit[2].addEventListener("click", () => {
   roomVip.exit();
 });
-
-const scrollFacilities = document.querySelector("#our-facilities .row");
-const btnPrev = document.getElementById("prev");
-const btnNext = document.getElementById("next");
-function autoScrollN() {
-  return scrollFacilities.scrollBy(300, 0);
-}
-function autoScrollP() {
-  return scrollFacilities.scrollBy(-300, 0);
-}
-
-btnNext.addEventListener("click", () => {
-  autoScrollN();
-});
-btnPrev.addEventListener("click", () => {
-  autoScrollP();
-});
