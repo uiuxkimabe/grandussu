@@ -295,7 +295,7 @@ nav a {
 #our-rooms .row {
   margin-top: 2em;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em;
+  gap: 1.5em;
 }
 
 .card-room .card-header {
@@ -309,7 +309,8 @@ nav a {
 }
 
 .card-header img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -331,80 +332,65 @@ nav a {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  transform: translateY(100%);
+  transform: scale(0);
   transition: 0.3s ease-in-out;
 }
 
 .modals.popup {
-  transform: translateY(0);
+  transform: scale(1);
 }
 
 .modals .container {
   justify-content: center;
 }
 
-.room-card {
+.content {
   background-color: var(--basic);
+  align-items: flex-start;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1em;
-  place-items: start;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+  position: absolute;
+}
+
+.content.popup {
+  transform: scale(1);
+}
+
+.content img {
+  width: 100%;
+}
+
+.room-detail {
   padding: 1em;
 }
 
-.room-img {
-  overflow: hidden;
-}
-
-.room-img img {
-  object-fit: cover;
-  width: 100%;
-}
-
-.room-desc {
+.room-detail .desc {
   margin: 1em 0;
-  height: 130px;
-  overflow-y: scroll;
   font-size: 0.8rem;
   text-align: justify;
-}
-
-.room-desc::-webkit-scrollbar {
-  display: none;
-}
-
-.room-desc h3 {
-  margin: 0.5em 0;
-}
-
-.room-desc ul {
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-
-.room-desc ul li {
-  flex: 0 0 80px;
   color: var(--general);
 }
 
-.btn .check {
-  margin-top: 1em;
+.room-detail .btn button {
   width: 100%;
-  padding: 0.6em 2em;
-  border: none;
-  background-color: var(--primary);
-  color: var(--basic);
+  margin: 10px 0;
+  padding: 10px 0;
+  font-size: 1.1rem;
   border-radius: 5px;
 }
 
-.btn .cancel {
-  margin-top: 1em;
-  width: 100%;
-  padding: 0.6em 2em;
-  border: none;
-  border: 1px solid var(--dark);
+.btn .check {
+  background-color: var(--primary);
+  color: var(--basic);
+  border: 1px solid var(--primary);
+}
+
+.btn .exit {
+  background-color: none;
   color: var(--dark);
-  border-radius: 5px;
+  border: 1px solid var(--dark);
 }
 
 /* === END PREVIEW ROOMS === */

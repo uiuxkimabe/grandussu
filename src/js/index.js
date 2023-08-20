@@ -23,22 +23,59 @@ hamBtn.addEventListener("click", () => {
   navigation.classList.toggle("show");
 });
 
-// Navigasi Modals Rooms
-const cardRooms = document.querySelectorAll(".card-room");
-const modal = document.querySelector(".modals");
-const cancelCheck = document.querySelector(".btn .cancel");
-cardRooms.forEach((element) => {
-  element.addEventListener("click", () => {
-    modal.classList.add("popup");
-  });
+// Class Popup
+class Popup {
+  constructor(bg, content) {
+    this.background = bg;
+    this.content = content;
+  }
+  showup(param) {
+    this.background.classList.add("popup");
+    setTimeout(() => {
+      this.content[param].classList.add("popup");
+    }, 300);
+  }
+  exit(param) {
+    this.background.classList.remove("popup");
+    setTimeout(() => {
+      this.content[param].classList.remove("popup");
+    }, 300);
+  }
+}
+
+const modals = document.querySelector(".modals");
+const cardRoom = document.querySelectorAll(".card-room");
+const content = document.querySelectorAll(".content");
+// btn exit popup
+const btnExit = document.querySelectorAll(".exit");
+const modRoom = new Popup(modals, content);
+
+cardRoom[0].addEventListener("click", () => {
+  modRoom.background;
+  modRoom.content;
+  modRoom.showup(0);
 });
 
-modal.addEventListener("click", () => {
-  modal.classList.remove("popup");
-  console.info("oke");
+cardRoom[1].addEventListener("click", () => {
+  modRoom.background;
+  modRoom.content;
+  modRoom.showup(1);
 });
 
-cancelCheck.addEventListener("click", () => {
-  modal.classList.remove("popup");
-  console.info("oke");
+cardRoom[2].addEventListener("click", () => {
+  modRoom.background;
+  modRoom.content;
+  modRoom.showup(2);
+});
+
+btnExit[0].addEventListener("click", () => {
+  modRoom.exit(0);
+});
+
+btnExit[1].addEventListener("click", () => {
+  modRoom.exit(1);
+});
+
+btnExit[2].addEventListener("click", () => {
+  modRoom.exit(2);
 });
