@@ -87,10 +87,10 @@ const scrollFacilities = document.querySelector("#our-facilities .row");
 const btnPrev = document.getElementById("prev");
 const btnNext = document.getElementById("next");
 function autoScrollN() {
-  return scrollFacilities.scrollBy(250, 0);
+  return scrollFacilities.scrollBy(266, 0);
 }
 function autoScrollP() {
-  return scrollFacilities.scrollBy(-250, 0);
+  return scrollFacilities.scrollBy(-266, 0);
 }
 
 btnNext.addEventListener("click", () => {
