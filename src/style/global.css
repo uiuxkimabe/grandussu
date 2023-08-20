@@ -349,17 +349,18 @@ nav a {
   align-items: flex-start;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1em;
-  transform: scale(0);
+  display: none;
   transition: 0.3s ease-in-out;
   position: absolute;
+  max-width: 90%;
 }
 
 .content.popup {
-  transform: scale(1);
+  display: grid;
 }
 
 .content img {
-  width: 90%;
+  width: 100%;
 }
 
 .room-detail {

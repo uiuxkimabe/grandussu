@@ -29,16 +29,16 @@ class Popup {
     this.background = bg;
     this.content = content;
   }
-  showup(param) {
+  showup() {
     this.background.classList.add("popup");
     setTimeout(() => {
-      this.content[param].classList.add("popup");
+      this.content.classList.add("popup");
     }, 300);
   }
-  exit(param) {
-    this.background.classList.remove("popup");
+  exit() {
+    this.content.classList.remove("popup");
     setTimeout(() => {
-      this.content[param].classList.remove("popup");
+      this.background.classList.remove("popup");
     }, 300);
   }
 }
@@ -46,36 +46,39 @@ class Popup {
 const modals = document.querySelector(".modals");
 const cardRoom = document.querySelectorAll(".card-room");
 const content = document.querySelectorAll(".content");
+const [deluxe, superior, vip] = content;
 // btn exit popup
 const btnExit = document.querySelectorAll(".exit");
-const modRoom = new Popup(modals, content);
 
+// Deluxe
+const roomDeluxe = new Popup(modals, deluxe);
+roomDeluxe.background = modals;
+roomDeluxe.content = deluxe;
 cardRoom[0].addEventListener("click", () => {
-  modRoom.background;
-  modRoom.content;
-  modRoom.showup(0);
+  roomDeluxe.showup();
 });
-
-cardRoom[1].addEventListener("click", () => {
-  modRoom.background;
-  modRoom.content;
-  modRoom.showup(1);
-});
-
-cardRoom[2].addEventListener("click", () => {
-  modRoom.background;
-  modRoom.content;
-  modRoom.showup(2);
-});
-
 btnExit[0].addEventListener("click", () => {
-  modRoom.exit(0);
+  roomDeluxe.exit();
 });
 
+// Superior
+const roomSuperior = new Popup(modals, superior);
+roomSuperior.background = modals;
+roomSuperior.content = superior;
+cardRoom[1].addEventListener("click", () => {
+  roomSuperior.showup();
+});
 btnExit[1].addEventListener("click", () => {
-  modRoom.exit(1);
+  roomSuperior.exit();
 });
 
+// VIP
+const roomVip = new Popup(modals, vip);
+roomVip.background = modals;
+roomVip.content = vip;
+cardRoom[2].addEventListener("click", () => {
+  roomVip.showup();
+});
 btnExit[2].addEventListener("click", () => {
-  modRoom.exit(2);
+  roomVip.exit();
 });
