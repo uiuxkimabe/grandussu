@@ -68,6 +68,12 @@ nav {
   transition: 0.3s ease-in-out;
 }
 
+#nav-accomodation {
+  position: relative;
+  top: 0;
+  background-color: var(--dark);
+}
+
 nav a {
   color: var(--basic);
 }
@@ -506,6 +512,46 @@ nav a {
 }
 
 /* === END PROMOTION === */
+
+/* === MAIN ROOMS === */
+
+.header-rooms {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 1em 0;
+  background-color: var(--basic);
+  text-align: center;
+  border-bottom: 1px solid var(--general);
+}
+
+.header-rooms .filter {
+  margin-top: 1.5em;
+  width: 100%;
+  justify-content: center;
+  gap: 1em;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.filter::-webkit-scrollbar {
+  display: none;
+}
+
+.filter li {
+  padding: 0.5em;
+  border: 1px solid var(--general);
+  border-radius: 5px;
+}
+
+main .row {
+  margin-top: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5em;
+  margin: 1em 0;
+}
+
+/* === END MAIN ROOMS === */
 
 /* === FOOTER ==== */
 
