@@ -69,7 +69,7 @@ nav {
 }
 
 #nav-accomodation {
-  position: relative;
+  position: sticky;
   top: 0;
   background-color: var(--dark);
 }
@@ -304,7 +304,8 @@ nav a {
   gap: 1.5em;
 }
 
-.card-room .card-header {
+.card-room .card-header,
+.card-conventions .card-header {
   height: 250px;
   background-color: var(--dark);
   margin-bottom: 1em;
@@ -517,31 +518,19 @@ nav a {
 
 .header-rooms {
   position: sticky;
-  top: 0;
+  top: 69px;
   z-index: 1;
   padding: 1em 0;
   background-color: var(--basic);
   text-align: center;
-  border-bottom: 1px solid var(--general);
 }
 
-.header-rooms .filter {
-  margin-top: 1.5em;
-  width: 100%;
-  justify-content: center;
+.filter ul {
   gap: 1em;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
 }
 
-.filter::-webkit-scrollbar {
-  display: none;
-}
-
-.filter li {
-  padding: 0.5em;
-  border: 1px solid var(--general);
-  border-radius: 5px;
+.room-list .row {
+  margin: 2em 0;
 }
 
 main .row {
@@ -551,7 +540,36 @@ main .row {
   margin: 1em 0;
 }
 
+main a {
+  color: var(--dark);
+}
+
 /* === END MAIN ROOMS === */
+
+/* === SECTION CONVENTIONS === */
+
+#conventions {
+  padding: 2em 0;
+  background-color: #c0c0c0;
+  color: var(--dark);
+}
+
+#conventions a {
+  color: var(--dark);
+}
+
+#conventions .row {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.more {
+  display: inline-block;
+  margin: auto;
+}
+
+/* === END SECTION CONVENTIONS === */
 
 /* === FOOTER ==== */
 

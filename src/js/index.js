@@ -1,11 +1,11 @@
 // scroll nav
-const nav = document.getElementsByTagName("nav")[0];
+const navHome = document.querySelector("#nav-home");
 const btnBooking = document.querySelector(".booking");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 1) {
-    nav.style.background = "#1d1d1d";
+    navHome.style.background = "#1d1d1d";
   } else {
-    nav.style.background = "none";
+    navHome.style.background = "none";
   }
   // scroll btn booking show
   if (window.scrollY > 485) {
@@ -82,3 +82,6 @@ cardRoom[2].addEventListener("click", () => {
 btnExit[2].addEventListener("click", () => {
   roomVip.exit();
 });
+
+// === HALAMAN ACCOMODATION.HTML ====
+// SWITCH FILTER
