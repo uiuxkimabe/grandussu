@@ -550,7 +550,7 @@ main a {
 
 #conventions {
   padding: 2em 0;
-  background-color: #c0c0c0;
+  background-color: #cfcfcf;
   color: var(--dark);
 }
 
@@ -566,10 +566,33 @@ main a {
 
 .more {
   display: inline-block;
-  margin: auto;
+  width: 100%;
+  text-align: center;
+  margin: 1.5em auto;
 }
 
 /* === END SECTION CONVENTIONS === */
+
+/* === SECTION RESTO */
+
+#resto {
+  padding: 3em 0;
+}
+
+#resto .row {
+  margin-top: 1em;
+}
+
+#resto figure {
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.desc-resto {
+  margin: 1em 0;
+}
+
+/* === END SECTION RESTO */
 
 /* === FOOTER ==== */
 
@@ -712,6 +735,22 @@ footer ul li {
 
   #facilities .row .col {
     height: 300px;
+  }
+
+  /* SECTION OUR ROOMS */
+
+  .header-rooms {
+    position: sticky;
+    top: 55px;
+  }
+
+  /* SECTION OUR RESTO */
+  #resto figure {
+    flex-wrap: wrap;
+  }
+
+  #resto figure img {
+    width: 100%;
   }
 }
 
