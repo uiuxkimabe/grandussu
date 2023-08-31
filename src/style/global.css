@@ -28,11 +28,11 @@ h3,
 h4,
 h5,
 h6 {
-    font-style: var(--poppins);
+    font-family: var(--poppins);
 }
 
 p {
-    font-style: var(--hind);
+    font-family: var(--hind);
 }
 
 .container {
@@ -321,6 +321,11 @@ nav a {
     border-radius: 10px;
     position: relative;
     justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+
+.card-room:hover {
+    color: var(--primary);
 }
 
 .card-header img {
@@ -528,6 +533,10 @@ nav a {
     text-align: center;
 }
 
+.filter {
+    flex-wrap: wrap;
+}
+
 .filter ul {
     gap: 1em;
 }
@@ -549,35 +558,6 @@ main a {
 
 
 /* === END MAIN ROOMS === */
-
-
-/* === SECTION CONVENTIONS === */
-
-#conventions {
-    padding: 2em 0;
-    background-color: #cfcfcf;
-    color: var(--dark);
-}
-
-#conventions a {
-    color: var(--dark);
-}
-
-#conventions .row {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5em;
-    margin-top: 1em;
-}
-
-.more {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    margin: 1.5em auto;
-}
-
-
-/* === END SECTION CONVENTIONS === */
 
 
 /* === SECTION RESTO */
@@ -603,10 +583,43 @@ main a {
 /* === END SECTION RESTO === */
 
 
+/* === SECTION CONVENTIONS === */
+
+#conventions {
+    padding: 2em 0;
+    background-color: #ececec;
+    color: var(--dark);
+}
+
+#conventions a {
+    color: var(--dark);
+}
+
+#conventions .row {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+.more {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 1.5em auto;
+}
+
+
+/* === END SECTION CONVENTIONS === */
+
+
 /* === SECTION TEAM === */
 
 #team {
     padding: 2em 0;
+}
+
+#team a {
+    color: var(--primary);
 }
 
 #team .row {
@@ -641,6 +654,24 @@ main a {
 
 
 /* === END SECTION TEAM === */
+
+
+/* ==== FACILITIES ==== */
+
+#facilities .row {
+    margin: 2em 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#facilities .fac {
+    margin: 1em 0;
+    gap: 1em;
+    justify-content: center;
+}
+
+
+/* ==== END FACILITIES ==== */
 
 
 /* === FOOTER ==== */
@@ -786,6 +817,17 @@ footer ul li {
     }
     #resto figure img {
         width: 100%;
+    }
+    /* PAGE FACILITIES */
+    #facilities .fac {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    #facilities .fac img {
+        order: 1;
+    }
+    #facilities .fac figcaption {
+        order: 2;
     }
 }
 
