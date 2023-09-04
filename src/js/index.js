@@ -83,5 +83,14 @@ btnExit[2].addEventListener("click", () => {
   roomVip.exit();
 });
 
-// === HALAMAN ACCOMODATION.HTML ====
-// SWITCH FILTER
+// === HALAMAN PROMOTION ====
+// ==== SLIDE PROMOTION ===
+
+const slidePreview = document.querySelectorAll(".slide-preview");
+console.info(slidePreview);
+
+slidePreview.forEach((element) => {
+  element.addEventListener("click", () => {
+    element.preventDefault();
+  });
+});

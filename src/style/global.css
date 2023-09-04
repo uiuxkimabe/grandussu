@@ -702,6 +702,27 @@ main a {
 
 /* ==== END FACILITIES ==== */
 
+/* === SECTION DETAIL PROMTOIN ===  */
+
+#detail-promotion {
+  padding: 3em 0;
+}
+
+#detail-promotion .row {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 1em;
+  scroll-behavior: smooth;
+}
+
+#detail-promotion .slide-preview {
+  height: 300px;
+  flex: 0 0 80%;
+  background-color: var(--primary);
+}
+
+/* === END SECTION DETAIL PROMTOIN ===  */
+
 /* === FOOTER ==== */
 
 footer {
