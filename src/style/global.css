@@ -648,10 +648,14 @@ main a {
 
 /* ==== FACILITIES ==== */
 
+#facilities {
+  padding: 2em 0;
+}
+
 #facilities .row {
-  margin: 2em 0;
-  flex-direction: column;
-  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+  margin-top: 2em;
 }
 
 #facilities .filter {
@@ -673,6 +677,27 @@ main a {
   border: 1px solid var(--general);
   border-radius: 10px;
   color: var(--general);
+}
+
+#facilities .img-preview {
+  height: 300px;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-preview img {
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+
+#facilities .img-preview span {
+  padding: 1em;
+  position: absolute;
+  background-color: var(--basic);
 }
 
 /* ==== END FACILITIES ==== */
