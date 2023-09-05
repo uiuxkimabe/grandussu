@@ -83,12 +83,3 @@ btnExit[2].addEventListener("click", () => {
   roomVip.exit();
 });
 
-// === HALAMAN PROMOTION ====
-// ==== SLIDE PROMOTION ===
-
-const slidePreview = document.querySelectorAll(".slide-preview");
-console.info(slidePreview);
-
-slidePreview.forEach((e) => {
-  e.preventDefault();
-});
