@@ -89,8 +89,6 @@ btnExit[2].addEventListener("click", () => {
 const slidePreview = document.querySelectorAll(".slide-preview");
 console.info(slidePreview);
 
-slidePreview.forEach((element) => {
-  element.addEventListener("click", () => {
-    element.preventDefault();
-  });
+slidePreview.forEach((e) => {
+  e.preventDefault();
 });
