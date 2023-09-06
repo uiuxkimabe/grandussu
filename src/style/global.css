@@ -715,9 +715,41 @@ main a {
   scroll-behavior: smooth;
 }
 
+#detail-promotion .row::-webkit-scrollbar {
+  display: none;
+}
+
 #detail-promotion .slide-preview {
-  height: 300px;
+  height: 400px;
   flex: 0 0 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  background-color: var(--primary);
+}
+
+.buy-promo {
+  margin-top: 2em;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.buy-promo li {
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.buy-promo li p {
+  font-size: 0.8rem;
+  color: var(--general);
+}
+
+.buy-promo .h-promo {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   background-color: var(--primary);
 }
 
