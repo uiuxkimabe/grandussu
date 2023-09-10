@@ -60,54 +60,118 @@
           <h1>Contact</h1>
           <p>Check Available</p>
         </figcaption>
-        <div class="row">
-          <form class="d-grid">
+        <form>
+          <label>Name</label> <br />
+          <input type="text" placeholder="Your Name" required />
+          <div class="row d-grid">
             <figcaption>
-              <label for="name">Name</label><br />
-              <input
-                type="text"
-                placeholder="Your Name"
-                title="Input Your Name"
-              />
+              <label>Check In</label>
+              <input type="date" name="checkIn" required id="ci" />
             </figcaption>
             <figcaption>
-              <label>Check In</label><br />
-              <input type="date" name="checkIn" id="ci" />
+              <label>Check In</label>
+              <input type="date" name="checkOut" required id="co" />
+            </figcaption>
+          </div>
+          <div class="row d-grid">
+            <figcaption>
+              <label>Pax</label>
+              <input type="number" name="qtyPax" />
             </figcaption>
             <figcaption>
-              <label>Check Out</label><br />
-              <input type="date" name="checkOut" id="co" />
+              <label>Phone</label>
+              <input type="number" name="phoneNumber" required />
             </figcaption>
             <figcaption>
-              <label for="phone">Phone Number</label><br />
-              <input
-                type="number"
-                name="phoneNumber"
-                placeholder="Ex. 08123456789"
-                id="phoneNumber"
-              />
+              <label>Email</label>
+              <input type="email" placeholder="example@email.com" />
             </figcaption>
-            <figcaption>
-              <label>Pax</label><br />
-              <input type="number" name="pax" id="pax" />
-            </figcaption>
-            <figcaption>
-              <label for="email">Email</label><br />
-              <input
-                type="email"
-                name="email"
-                placeholder="email@example.com"
-                id="email"
-              />
-            </figcaption>
-            <figcaption>
-              <label>Massage</label><br />
-              <textarea></textarea>
-            </figcaption>
-          </form>
-          <figcaption class="btn">
-            <button type="submit" class="check">Check Available</button>
-          </figcaption>
+          </div>
+          <label>Request Massage</label> <br />
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <button type="submit">Check Available</button>
+        </form>
+        
+        <div class="row info d-grid">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.783612093922!2d106.9209870818895!3d-6.6737117974269236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c82dcc9dd201%3A0x70af888ed175d3f5!2sGrand%20Ussu%20Hotel%20%26%20Convention!5e0!3m2!1sen!2sid!4v1694352055064!5m2!1sen!2sid"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="col address">
+            <figcaption class="moreInfo">
+          <h1>More Informations</h1>
+        </figcaption>
+            <ul>
+              <li class="d-flex">
+                <span class="material-symbols-outlined"> location_on </span>
+                <a href="#">
+                  <h4>Address</h4>
+                  <p>
+                    Jl. Raya Puncak, Km. 79 No. 62. Kopo. <br />Kec. Cisarua,
+                    Kab. Bogor. Post Code : 16750
+                  </p>
+                </a>
+              </li>
+              <li class="d-flex">
+                <span class="material-symbols-outlined"> support_agent </span>
+                <figcaption class="hunting">
+                  <h4>Reservation Support</h4>
+                  <figcaption>
+                    <a href="#">
+                      <p>Hunting</p>
+                      <p>0251 8256808</p>
+                    </a>
+                  </figcaption>
+                  <figcaption>
+                    <a href="#">
+                      <p>Whatsapp</p>
+                      <p>0812 8001 0003</p>
+                    </a>
+                  </figcaption>
+                </figcaption>
+              </li>
+              <li class="d-flex">
+                <span class="material-symbols-outlined"> sms </span>
+                <a href="#">
+                  <h4>Dessy Susanti</h4>
+                  <p>Manager & Executive Sales</p>
+                </a>
+              </li>
+              <li class="d-flex">
+                <span class="material-symbols-outlined"> sms </span>
+                <a href="#">
+                  <h4>Hanan Nazira</h4>
+                  <p>Executive Sales</p>
+                </a>
+              </li>
+              <li class="d-flex">
+                <span class="material-symbols-outlined"> sms </span>
+                <a href="#">
+                  <h4>Ondy Saputra</h4>
+                  <p>Executive Sales</p>
+                </a>
+              </li>
+              <li class="d-flex">
+                <span class="material-symbols-outlined"> sms </span>
+                <a href="#">
+                  <h4>Prasetya</h4>
+                  <p>Executive Sales</p>
+                </a>
+              </li>
+              <li class="d-flex">
+                <span class="material-symbols-outlined"> email </span>
+                <figcaption>
+                  <a href="mailto:reservation@grandussu.com"
+                    >reservation@grandussu.com</a
+                  >
+                </figcaption>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -118,7 +182,7 @@
       <div class="container">
         <figcaption>
           <h1>Our Team</h1>
-          <p>We're ready to prepare your events</p>
+          <p>Contact our sales to handle your events</p>
         </figcaption>
         <div class="row d-flex">
           <div class="card-team">
