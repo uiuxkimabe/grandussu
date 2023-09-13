@@ -27,7 +27,9 @@ form.addEventListener("submit", (e) => {
         available.innerHTML = "Done";
     }, 2000);
     setTimeout(() => {
-        alert(`Terima kasih untuk bantuannya ${custName.value} cantik 😊🤞`);
+        alert(
+            `Terima kasih untuk bantuannya ${custName.value} cantik 😘😜😜 wkwkwk \n Kalo muncul emot harusnya skrg udah masuk ke google sheetsnya`
+        );
         form.reset();
         available.innerHTML = "Check Available";
     }, 2100);
