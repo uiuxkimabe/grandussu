@@ -953,10 +953,6 @@ footer ul li {
 /* TABLET VIEW */
 
 @media screen and (max-width: 885px) {
-  html {
-    font-size: 65%;
-  }
-
   /* NAVBAR RESPONSIVE */
   nav {
     padding: 1em 0;
@@ -1040,10 +1036,6 @@ footer ul li {
 /* SMARTPHONE VIEW */
 
 @media screen and (max-width: 412px) {
-  html {
-    font-size: 55%;
-  }
-
   /* HERO RESPONSIVE */
   #hero svg {
     max-width: 300px;
