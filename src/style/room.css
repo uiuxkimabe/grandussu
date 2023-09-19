@@ -67,7 +67,7 @@ nav {
   top: 0;
   padding: 1em 0;
   background-color: var(--basic);
-  border: 1px solid var(--general);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
 .back {
@@ -121,7 +121,73 @@ nav {
   font-size: 0.9rem;
 }
 
+.book-room {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+  margin-top: 1.5em;
+}
+
+.book-room input {
+  width: 100%;
+  padding: 1em;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin: 10px 0;
+  border-bottom: 1px solid var(--general);
+}
+
+.total-book {
+  margin-top: 1.5em;
+  align-items: center;
+}
+
+.book-btn {
+  padding: 1em;
+}
+
+.qty-rooms,
+.date-in {
+  gap: 1em;
+}
+
+.qty-rooms figcaption,
+.date-in figcaption {
+  width: 100%;
+}
+
 /* END ROOMS */
+
+/* === SECTION CONVENTIONS === */
+
+#similar-rooms {
+  padding: 2em 0;
+  background-color: #ececec;
+  color: var(--dark);
+}
+
+#similar-rooms a {
+  color: var(--dark);
+}
+
+#similar-rooms .row {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.card-room img {
+  width: 100%;
+}
+
+.more {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 1.5em auto;
+}
+
+/* === END SECTION similar-rooms === */
 
 /* === FOOTER ==== */
 

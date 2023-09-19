@@ -69,9 +69,9 @@
             <figcaption class="specification">
               <h3>Capacity</h3>
               <ul class="d-grid">
-                <li>Luas ruangan : 4cm x 6cm</li>
-                <li>Luas Kasur : 4cm x 6cm</li>
-                <li>Kapasitas : 2 Pax - 4 Pax</li>
+                <li>Luas ruangan : 4m x 6m</li>
+                <li>Luas Kasur : 2.5m x 1.5m</li>
+                <li>Kapasitas : 2 - 4 Pax</li>
               </ul>
             </figcaption>
             <figcaption class="facilities">
@@ -117,14 +117,115 @@
             </figcaption>
           </div>
         </div>
-        <div class="row d-grid">
-          <form>
-            
-          </form>
+        <div class="row">
+          <figcaption>
+            <h1>Booking</h1>
+            <p>Start booking here</p>
+          </figcaption>
+          <div class="row d-grid">
+            <div class="col">
+              <form class="d-grid book-room">
+                <figcaption>
+                  <label>Name</label><br />
+                  <input type="text" /><br />
+                </figcaption>
+                <div class="col qty-rooms d-flex">
+                  <figcaption>
+                    <label>Pax</label><br />
+                    <input type="number" />
+                  </figcaption>
+                  <figcaption>
+                    <label>Total Rooms</label><br />
+                    <input type="number" />
+                  </figcaption>
+                </div>
+                <div class="col date-in d-flex">
+                  <figcaption>
+                    <label>Check-In</label><br />
+                    <input type="date" />
+                  </figcaption>
+                  <figcaption>
+                    <label>Check-Out</label><br />
+                    <input type="date" />
+                  </figcaption>
+                </div>
+                <figcaption>
+                  <label>Phone</label><br />
+                  <input type="number" />
+                </figcaption>
+              </form>
+              <figcaption class="total-book d-flex">
+                <figcaption>
+                  <p>
+                    <span class="night">0</span> Malam,
+                    <span class="rooms-qty">0</span> Rooms
+                  </p>
+                  <h4 class="total-price">650.000</h4>
+                </figcaption>
+                <button type="submit" class="book-btn">Booking</button>
+              </figcaption>
+            </div>
+            <div class="col">
+              <h3>Term and Condition</h3>
+              <ul>
+                <li>
+                  Pembayaran dilakukan pada saat Check-In / Check-Out, atau
+                  contact melalui petugas reservasi kami.
+                </li>
+                <li>Apabila terjadi cancel</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- END SECTION ROOMS -->
+
+    <!-- SECTION SIMILAR ROOMS -->
+    <section id="similar-rooms">
+      <div class="container">
+        <figcaption>
+          <h1>Similar Room</h1>
+          <p>Our Comfort Room</p>
+        </figcaption>
+        <div class="row d-grid">
+          <a href=".html" class="card-room rooms cluster">
+            <figure>
+              <div class="card-header d-flex">
+                <img
+                  src="../src/assets/rooms/bougenville/BOUGENVILLE 5.jpg"
+                  alt="Grand Ussu Bougenville"
+                />
+              </div>
+              <figcaption class="room-desc d-flex">
+                <div class="detail-desc">
+                  <p class="discount-mark">Available 15 Rooms</p>
+                  <h3>Cluster Rose</h3>
+                </div>
+              </figcaption>
+            </figure>
+          </a>
+          <a href=".html" class="card-room rooms cottages">
+            <figure>
+              <div class="card-header d-flex">
+                <img
+                  src="./src/assets/rooms/bougenville/BOUGENVILLE 5.jpg"
+                  alt="Grand Ussu Bougenville"
+                />
+              </div>
+              <figcaption class="room-desc d-flex">
+                <div class="detail-desc">
+                  <p class="discount-mark">Available 5 Cottages</p>
+                  <h3>Cluster Anggrek</h3>
+                </div>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
+        <a href="#" class="more">See More >>></a>
+      </div>
+    </section>
+    <!-- END SECTION SIMILAR ROOMS -->
 
     <!-- FOOTER -->
     <footer>
