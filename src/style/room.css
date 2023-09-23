@@ -65,6 +65,7 @@ p {
 nav {
   position: sticky;
   top: 0;
+  z-index: 1;
   padding: 1em 0;
   background-color: var(--basic);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
@@ -124,7 +125,7 @@ nav {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
   transition: 0.3s ease-in-out;
@@ -153,7 +154,7 @@ nav {
   position: absolute;
   top: 50%;
   left: 20px;
-  z-index: 2;
+  z-index: 1;
   transform: translateY(-50%);
 }
 
@@ -165,6 +166,7 @@ nav {
   position: absolute;
   top: 50%;
   right: 20px;
+  z-index: 1;
   transform: translateY(-50%);
 }
 
