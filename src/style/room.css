@@ -78,7 +78,7 @@ nav {
 
 /* END NAVBAR */
 
-/* ROOMS */
+/* ROOMS DETAILS */
 
 #rooms {
   padding: 2em 0;
@@ -89,9 +89,93 @@ nav {
   gap: 2em;
 }
 
-#rooms .slide {
+#rooms .photo-preview {
+  display: block;
   height: 300px;
-  background-color: var(--dark);
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-preview .preview-hover {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+
+.photo-preview:hover .preview-hover {
+  transform: scale(1);
+}
+
+.slider {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  transform: scale(0);
+}
+
+.slider .container {
+  overflow: hidden;
+  justify-content: center;
+}
+
+.slider .carousel {
+  width: 637px;
+  overflow: hidden;
+}
+
+.slider .carousel img {
+  width: 100%;
+}
+
+#prevBtn {
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--basic);
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+#nextBtn {
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--basic);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+#closePreview {
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--basic);
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
 }
 
 .room-detail .desc,
@@ -125,6 +209,9 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1em;
   margin-top: 1.5em;
+  border: 1px solid var(--general);
+  padding: 1em;
+  border-radius: 10px;
 }
 
 .book-room input {
@@ -143,7 +230,15 @@ nav {
 }
 
 .book-btn {
-  padding: 1em;
+  padding: 1em 2em;
+  border: none;
+  background-color: var(--primary);
+  color: var(--basic);
+  border-radius: 5px;
+}
+
+.book-btn:focus {
+  background-color: #bb1350;
 }
 
 .qty-rooms,
@@ -156,9 +251,17 @@ nav {
   width: 100%;
 }
 
-/* END ROOMS */
+.term ul li {
+  list-style: circle;
+  margin: 10px 0;
+  margin-left: 1.2em;
+  text-align: justify;
+  color: var(--general);
+}
 
-/* === SECTION CONVENTIONS === */
+/* END ROOMS DETAILS */
+
+/* SIMILAR ROOMS */
 
 #similar-rooms {
   padding: 2em 0;
@@ -176,8 +279,29 @@ nav {
   margin-top: 1em;
 }
 
-.card-room img {
+#similar-rooms .card-room {
+  margin-bottom: 1em;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+
+.card-header {
   width: 100%;
+  height: 300px;
+}
+
+.card-header img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.room-desc {
+  margin-top: 1em;
 }
 
 .more {
@@ -187,7 +311,7 @@ nav {
   margin: 1.5em auto;
 }
 
-/* === END SECTION similar-rooms === */
+/* END SIMILAR ROOMS */
 
 /* === FOOTER ==== */
 
