@@ -15,6 +15,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facilities | Grand Ussu</title>
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- 👇 css code file 👇 -->
     <link rel="stylesheet" href="./src/style/global.css" />
     <!-- font use -->
@@ -56,12 +58,12 @@
     <!-- SECTION OUR RESTAURANT -->
     <section id="facilities">
       <div class="container">
-        <figcaption>
+        <figcaption data-aos="fade-up" data-aos-delay="50">
           <h1>Facilities</h1>
           <p>Enjoy our service</p>
         </figcaption>
         <div class="row d-grid">
-          <div class="img-preview">
+          <div class="img-preview" data-aos="fade-up" data-aos-delay="100">
             <img
               src="./src/assets/rooms/bougenville/BOUGENVILLE 2.jpg"
               alt=""
@@ -71,7 +73,7 @@
               <p>Open at 06.00 - 23.30</p>
             </span>
           </div>
-          <div class="img-preview">
+          <div class="img-preview" data-aos="fade-up" data-aos-delay="150">
             <img
               src="./src/assets/rooms/bougenville/BOUGENVILLE 2.jpg"
               alt=""
@@ -81,7 +83,7 @@
               <p>Open at 06.00 - 23.30</p>
             </span>
           </div>
-          <div class="img-preview">
+          <div class="img-preview" data-aos="fade-up" data-aos-delay="200">
             <img
               src="./src/assets/rooms/bougenville/BOUGENVILLE 2.jpg"
               alt=""
@@ -91,7 +93,7 @@
               <p>Open at 06.00 - 23.30</p>
             </span>
           </div>
-          <div class="img-preview">
+          <div class="img-preview" data-aos="fade-up" data-aos-delay="250">
             <img
               src="./src/assets/rooms/bougenville/BOUGENVILLE 2.jpg"
               alt=""
@@ -101,7 +103,7 @@
               <p>Open at 06.00 - 23.30</p>
             </span>
           </div>
-          <div class="img-preview">
+          <div class="img-preview" data-aos="fade-up" data-aos-delay="300">
             <img
               src="./src/assets/rooms/bougenville/BOUGENVILLE 2.jpg"
               alt=""
@@ -120,23 +122,35 @@
     <section id="promotion">
       <div class="container">
         <div class="row d-grid">
-          <div class="col">
+          <div class="col" data-aos="fade-up" data-aos-delay="50">
             <h1>Get special package for your events</h1>
           </div>
           <div class="col package d-flex">
-            <div class="card-package d-flex">
+            <div
+              class="card-package d-flex"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <figcaption>
                 <h3>Sumo Package</h3>
                 <p class="period">Available 01 - 31 August 2023</p>
               </figcaption>
             </div>
-            <div class="card-package d-flex">
+            <div
+              class="card-package d-flex"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
               <figcaption>
                 <h3>Wedding Package</h3>
                 <p class="period">Start 25M</p>
               </figcaption>
             </div>
-            <div class="card-package d-flex">
+            <div
+              class="card-package d-flex"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <figcaption>
                 <h3>Prewed Package</h3>
                 <p class="period">Only 4.999.999</p>
@@ -151,12 +165,17 @@
     <!-- SECTION SIMILAR ROOMS -->
     <section id="conventions">
       <div class="container">
-        <figcaption>
+        <figcaption data-aos="fade-up" data-aos-delay="50">
           <h1>Similar Room</h1>
           <p>Our Comfort Room</p>
         </figcaption>
         <div class="row d-grid">
-          <a href=".html" class="card-room rooms cluster">
+          <a
+            href=".html"
+            class="card-room rooms cluster"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <figure>
               <div class="card-header d-flex">
                 <img
@@ -172,7 +191,12 @@
               </figcaption>
             </figure>
           </a>
-          <a href=".html" class="card-room rooms cottages">
+          <a
+            href=".html"
+            class="card-room rooms cottages"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
             <figure>
               <div class="card-header d-flex">
                 <img
@@ -197,7 +221,7 @@
     <!-- FOOTER -->
     <footer>
       <div class="container">
-        <div class="row d-grid">
+        <div class="row d-grid" data-aos="fade-up" data-aos-delay="50">
           <div class="col logo">
             <a href="#">Grand Ussu</a>
           </div>
@@ -279,6 +303,11 @@
     </footer>
     <!-- END FOOTER -->
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- 👇 javascript code file 👇 -->
     <script src="./src/js/index.js"></script>
   </body>
