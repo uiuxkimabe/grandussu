@@ -92,9 +92,10 @@ nav {
 
 #rooms .photo-preview {
   display: block;
-  height: 300px;
+  height: 400px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 2em;
 }
 
 .photo-preview img {
@@ -200,11 +201,16 @@ nav {
   gap: 1em;
 }
 
-.specification ul li {
+.specification ul li,
+.facilities ul li {
   padding: 10px;
   border: 1px solid #c5c5c5;
   border-radius: 5px;
   font-size: 0.9rem;
+}
+
+.specification .head-size {
+  margin-bottom: 1em;
 }
 
 .book-room {
