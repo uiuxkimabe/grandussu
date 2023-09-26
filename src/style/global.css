@@ -1038,7 +1038,7 @@ footer ul li {
 @media screen and (max-width: 412px) {
   /* HERO RESPONSIVE */
   #hero svg {
-    max-width: 300px;
+    max-width: 290px;
   }
   .hero-headline {
     max-width: 312px;
