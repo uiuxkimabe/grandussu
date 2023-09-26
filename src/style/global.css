@@ -464,7 +464,7 @@ nav a {
       rgba(0, 0, 0, 0.9051995798319328) 100%,
       rgba(0, 0, 0, 0.8295693277310925) 100%
     ),
-    url(../assets/resto/amarillys-resto-01.jpg) no-repeat;
+    url(../assets/resto/amarillys/amarillys-resto-01.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   color: var(--basic);
@@ -766,7 +766,7 @@ main a {
       rgba(0, 0, 0, 0.9051995798319328) 100%,
       rgba(0, 0, 0, 0.8295693277310925) 100%
     ),
-    url(../assets/resto/amarillys-resto-01.jpg) no-repeat;
+    url(../assets/resto/coco/coco-002.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   color: var(--basic);

@@ -85,6 +85,10 @@ nav {
   padding: 2em 0;
 }
 
+#rooms p {
+  color: var(--general);
+}
+
 #rooms .row {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2em;
@@ -209,8 +213,30 @@ nav {
   font-size: 0.9rem;
 }
 
+.specification ul li {
+  justify-content: flex-start;
+  gap: 1em;
+}
+
 .specification .head-size {
   margin-bottom: 1em;
+}
+
+.specification .icon-table {
+  max-width: 50px;
+  color: #d9d9d9;
+}
+
+.contact-team {
+  margin: 2em 0;
+}
+
+.contact-team ul li {
+  margin: 1em 0;
+}
+
+.contact-team ul li a h4 {
+  color: var(--dark);
 }
 
 .book-room {
@@ -320,6 +346,56 @@ nav {
 }
 
 /* END SIMILAR ROOMS */
+
+/* MEETING PACKAGE */
+
+#meeting-package {
+  padding: 3em 0;
+  background-color: #ececec;
+}
+
+#meeting-package p {
+  color: var(--general);
+}
+
+#meeting-package .row {
+  margin-top: 2em;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+#meeting-package .row::-webkit-scrollbar {
+  display: none;
+}
+
+#meeting-package .card-meeting {
+  flex: 0 0 300px;
+}
+
+#meeting-package .card-meeting img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+#meeting-package .card-meeting figcaption {
+  padding: 5px;
+}
+
+#meeting-package .card-meeting figcaption .package-name {
+  margin: 10px 0;
+}
+
+#meeting-package .card-meeting figcaption ul li {
+  list-style: circle;
+  margin-left: 1.2em;
+  color: var(--general);
+  font-size: 0.9rem;
+}
+
+/* END MEETING PACKAGE */
 
 /* === FOOTER ==== */
 
