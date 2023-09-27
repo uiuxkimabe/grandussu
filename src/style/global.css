@@ -652,6 +652,23 @@ main a {
   padding: 2em 0;
 }
 
+#facilities dialog.popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-content {
+  position: absolute;
+  opacity: 0;
+}
+
 #facilities .row {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1em;
@@ -686,6 +703,7 @@ main a {
   align-items: center;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 
 .img-preview img {
@@ -911,7 +929,6 @@ footer h4 {
 
 footer ul li {
   margin: 10px 0;
-  list-style: inside;
   justify-content: flex-start !important;
   gap: 10px;
 }
@@ -919,6 +936,7 @@ footer ul li {
 .socmed {
   justify-content: flex-start;
   gap: 1em;
+  margin-top: -10px;
 }
 
 .author {
@@ -1002,9 +1020,7 @@ footer ul li {
     flex: 0 0 100%;
   }
   /* FACILITIES */
-  #facilities .row {
-    grid-template-areas: "convention convention" "restaurant playground";
-  }
+
   #facilities .row .col {
     height: 300px;
   }

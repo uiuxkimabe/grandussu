@@ -465,3 +465,17 @@ footer ul li {
 }
 
 /* === END FOOTER === */
+
+/* RESPONSIVE */
+
+/* TABLET VIEW */
+
+@media screen and (max-width: 885px) {
+  #rooms p {
+    font-size: 0.9rem;
+  }
+
+  .term ul li {
+    font-size: 0.9rem;
+  }
+}
