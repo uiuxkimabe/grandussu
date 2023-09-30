@@ -652,7 +652,7 @@ main a {
   padding: 2em 0;
 }
 
-#facilities dialog.popUp {
+#facilities dialog {
   position: fixed;
   top: 0;
   left: 0;
@@ -662,11 +662,20 @@ main a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  transform: translateY(-100%);
 }
 
-#facilities dialog {
-  border: none;
+#facilities dialog .closeContent {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: var(--basic);
+}
+
+#facilities dialog.popUp {
+  transform: translateY(0);
 }
 
 #facilities dialog .row {
@@ -678,6 +687,20 @@ main a {
   position: absolute;
   opacity: 0;
   background-color: var(--basic);
+}
+
+.dialog-content figure {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+}
+
+.dialog-content figure img {
+  max-width: 100%;
+}
+
+.dialog-content figure figcaption {
+  padding: 1em;
 }
 
 #facilities .row {

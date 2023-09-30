@@ -12,13 +12,13 @@ function showContent(params) {
   });
 }
 
-dialog.addEventListener("click", () => {
-  dialog.classList.toggle("popUp");
-  location.reload();
-});
-
 showContent(0);
 showContent(1);
 showContent(2);
 showContent(3);
 showContent(4);
+
+document.querySelector(".closeContent").addEventListener("click", () => {
+  dialog.classList.toggle("popUp");
+  location.reload();
+});
