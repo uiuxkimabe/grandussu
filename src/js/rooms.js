@@ -57,3 +57,33 @@ document.getElementById("closePreview").addEventListener("click", () => {
     location.reload();
   }, 300);
 });
+
+// Booking Room Form
+
+const pax = document.querySelector(".pax");
+const roomQty = document.querySelector(".room_qty");
+const night = document.querySelector(".night");
+const rooms = document.querySelector(".rooms-qty");
+
+function qtyChange(n, r) {
+  pax.addEventListener("change", () => {
+    n.innerHTML = pax.value;
+  });
+  roomQty.addEventListener("change", () => {
+    r.innerHTML = roomQty.value;
+  });
+}
+
+qtyChange(night, rooms);
+
+// Send Message to Google Sheets Form
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbwbH9Y1pH6iGEgA7XS_lPQcnlZxw2xRAFMolB1lzADYC1RGmdIigw94H-CzjT0Phwar/exec";
+const form = document.forms["booking-form"];
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => console.log("Success!", response))
+    .catch((error) => console.error("Error!", error.message));
+});
