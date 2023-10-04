@@ -74,11 +74,16 @@ function qtyChange(n, r) {
   });
 }
 
+function resetNR() {
+  night.innerHTML = "0";
+  rooms.innerHTML = "0";
+}
+
 qtyChange(night, rooms);
 
 // Send Message to Google Sheets Form
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbwbH9Y1pH6iGEgA7XS_lPQcnlZxw2xRAFMolB1lzADYC1RGmdIigw94H-CzjT0Phwar/exec";
+  "https://script.google.com/macros/s/AKfycbzf4pKrOU82VVdm070DisYKyMMfltTScEBKBX7PhHu58h_MdQYNkRdQNCXxdJ0IJAao9w/exec";
 const form = document.forms["booking-form"];
 
 form.addEventListener("submit", (e) => {
@@ -86,4 +91,22 @@ form.addEventListener("submit", (e) => {
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => console.log("Success!", response))
     .catch((error) => console.error("Error!", error.message));
+  form.reset();
+  resetNR();
+  bookingNotif.classList.toggle("showUp");
+  setTimeout(() => {
+    bookingNotifDetail.classList.toggle("showUp");
+  }, 500);
+});
+
+// Booking Alert
+const bookingNotif = document.getElementById("booknotif");
+const bookingNotifDetail = document.querySelector(".book-notif-detail");
+const directWa = document.querySelector(".direct-wa");
+
+directWa.addEventListener("click", () => {
+  bookingNotifDetail.classList.toggle("showUp");
+  setTimeout(() => {
+    bookingNotif.classList.toggle("showUp");
+  }, 1000);
 });
