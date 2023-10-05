@@ -110,3 +110,6 @@ directWa.addEventListener("click", () => {
     bookingNotif.classList.toggle("showUp");
   }, 1000);
 });
+
+const totalPrice = Number(document.querySelector(".total-price"));
+

@@ -275,9 +275,13 @@ nav {
   background-color: #bb1350;
 }
 
+.max {
+  font-size: small;
+  margin-bottom: 5px;
+}
+
 .qty-rooms,
-.date-in,
-.status {
+.date-in {
   gap: 1em;
 }
 
