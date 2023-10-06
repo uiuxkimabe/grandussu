@@ -617,7 +617,7 @@ main a {
 #team .row {
   justify-content: flex-start;
   gap: 1em;
-  margin: 2em 0;
+  margin: 2em auto;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
 }
@@ -632,6 +632,12 @@ main a {
   border: 1px solid var(--general);
   padding: 1em 0;
   border-radius: 10px;
+}
+
+.card-team img {
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--dark);
 }
 
 .card-team ul {
