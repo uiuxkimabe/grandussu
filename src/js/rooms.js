@@ -62,24 +62,6 @@ document.getElementById("closePreview").addEventListener("click", () => {
 
 const pax = document.querySelector(".pax");
 const roomQty = document.querySelector(".room_qty");
-const night = document.querySelector(".night");
-const rooms = document.querySelector(".rooms-qty");
-
-function qtyChange(n, r) {
-  pax.addEventListener("change", () => {
-    n.innerHTML = pax.value;
-  });
-  roomQty.addEventListener("change", () => {
-    r.innerHTML = roomQty.value;
-  });
-}
-
-function resetNR() {
-  night.innerHTML = "0";
-  rooms.innerHTML = "0";
-}
-
-qtyChange(night, rooms);
 
 // Send Message to Google Sheets Form
 const scriptURL =
@@ -92,7 +74,7 @@ form.addEventListener("submit", (e) => {
     .then((response) => console.log("Success!", response))
     .catch((error) => console.error("Error!", error.message));
   form.reset();
-  resetNR();
+  console.info("booking berhasil");
   bookingNotif.classList.toggle("showUp");
   setTimeout(() => {
     bookingNotifDetail.classList.toggle("showUp");
@@ -110,6 +92,3 @@ directWa.addEventListener("click", () => {
     bookingNotif.classList.toggle("showUp");
   }, 1000);
 });
-
-const totalPrice = Number(document.querySelector(".total-price"));
-

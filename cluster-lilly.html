@@ -143,7 +143,14 @@
                 <div class="col qty-rooms d-flex">
                   <figcaption>
                     <label>Pax</label><br />
-                    <input type="number" name="pax" class="pax" value="0" />
+                    <input
+                      type="number"
+                      name="pax"
+                      min="1"
+                      max="4"
+                      class="pax"
+                      placeholder="Max. 4 Pax"
+                    />
                   </figcaption>
                   <figcaption>
                     <label>Total Rooms</label><br />
@@ -151,7 +158,9 @@
                       type="number"
                       name="room_qty"
                       class="room_qty"
-                      value="0"
+                      min="1"
+                      max="5"
+                      placeholder="Max. 5 Rooms"
                     />
                   </figcaption>
                 </div>
@@ -165,17 +174,27 @@
                     <input type="date" name="check_out" />
                   </figcaption>
                 </div>
-                <figcaption>
-                  <label>Phone</label><br />
-                  <input type="number" name="phone" />
+                <figcaption class="status d-flex">
+                  <figcaption>
+                    <label>Phone</label><br />
+                    <input type="number" name="phone" />
+                  </figcaption>
                 </figcaption>
                 <figcaption class="total-book d-flex">
                   <figcaption>
-                    <p>
-                      <span class="night">0</span> Malam,
-                      <span class="rooms-qty">0</span> Rooms
-                    </p>
-                    <input type="text" name="total_price" disabled />
+                    <input
+                      type="hidden"
+                      name="cluster_name"
+                      value="Cluster Anggrek"
+                    />
+                    <label>Total</label>
+                    <input
+                      type="number"
+                      name="total-price"
+                      value="650.000"
+                      disabled
+                      class="total-price"
+                    />
                   </figcaption>
                   <button type="submit" class="book-btn">Booking</button>
                 </figcaption>
