@@ -422,6 +422,7 @@ nav a {
 #our-facilities .row {
   overflow-x: scroll;
   justify-content: flex-start;
+  align-items: flex-start;
   gap: 1.5em;
   margin: 2em 0;
   scroll-behavior: smooth;
