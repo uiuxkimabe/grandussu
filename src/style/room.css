@@ -499,6 +499,10 @@ footer ul li {
   gap: 1em;
 }
 
+.socmed li {
+  list-style: none;
+}
+
 .author {
   text-align: center;
   padding: 1em 0;

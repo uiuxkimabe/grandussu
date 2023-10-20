@@ -14,7 +14,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rooms | Cluster Garbella</title>
+    <title>Rooms | Cluster Garbella</title><!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="./src/assets/icons/favicon.png"
+      type="image/x-icon"
+    />
     <!-- 👇 css code file 👇 -->
     <link rel="stylesheet" href="./src/style/room.css" />
     <!-- <link rel="stylesheet" href="./src/style/global.css" /> -->
@@ -160,19 +165,19 @@
                       name="room_qty"
                       class="room_qty"
                       min="1"
-                      max="5"
-                      placeholder="Max. 5 Rooms"
+                      max="15"
+                      placeholder="Max. 15 Rooms"
                     />
                   </figcaption>
                 </div>
                 <div class="col date-in d-flex">
                   <figcaption>
                     <label>Check-In</label><br />
-                    <input type="date" name="check_in" />
+                    <input type="date" name="check_in" class="date checkIn" />
                   </figcaption>
                   <figcaption>
                     <label>Check-Out</label><br />
-                    <input type="date" name="check_out" />
+                    <input type="date" name="check_out" class="date checkOut" />
                   </figcaption>
                 </div>
                 <figcaption class="status d-flex">
