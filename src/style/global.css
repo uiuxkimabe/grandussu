@@ -785,7 +785,36 @@ main a {
   justify-content: center;
   align-items: center;
   border-radius: 1em;
-  background-color: var(--primary);
+  border: 1px solid black;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.slide-preview::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slide-preview figcaption {
+  position: relative;
+  z-index: 2;
+  color: var(--basic);
+  text-align: center;
 }
 
 .buy-promo {
