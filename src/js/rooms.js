@@ -92,3 +92,19 @@ directWa.addEventListener("click", () => {
     bookingNotif.classList.toggle("showUp");
   }, 1000);
 });
+
+// Date Day Picker
+
+const date = document.querySelectorAll(".date-in .date");
+function nights() {
+  let checkIn = new Date(date[0].value).getDate();
+  let checkOut = new Date(date[1].value).getDate();
+  let result = checkOut - checkIn;
+  console.info(result);
+}
+
+date.forEach((element) => {
+  element.addEventListener("change", () => {
+    nights();
+  });
+});
